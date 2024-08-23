@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{138697A2-F85B-4DFF-95B4-9314A8DD5947}|MovieManagementSelf\\MovieManagementSelf.csproj|c:\\users\\dell\\source\\repos\\moviemanagementself\\moviemanagementself\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{138697A2-F85B-4DFF-95B4-9314A8DD5947}|MovieManagementSelf\\MovieManagementSelf.csproj|solutionrelative:moviemanagementself\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{138697A2-F85B-4DFF-95B4-9314A8DD5947}|MovieManagementSelf\\MovieManagementSelf.csproj|c:\\users\\dell\\source\\repos\\moviemanagementself\\moviemanagementself\\controllers\\showinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{138697A2-F85B-4DFF-95B4-9314A8DD5947}|MovieManagementSelf\\MovieManagementSelf.csproj|solutionrelative:moviemanagementself\\controllers\\showinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{138697A2-F85B-4DFF-95B4-9314A8DD5947}|MovieManagementSelf\\MovieManagementSelf.csproj|c:\\users\\dell\\source\\repos\\moviemanagementself\\moviemanagementself\\views\\usergroup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{138697A2-F85B-4DFF-95B4-9314A8DD5947}|MovieManagementSelf\\MovieManagementSelf.csproj|solutionrelative:moviemanagementself\\views\\usergroup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\MovieManagementSelf\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "MovieManagementSelf\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\MovieManagementSelf\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "MovieManagementSelf\\Controllers\\BaseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T15:48:10.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShowInfoController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\MovieManagementSelf\\Controllers\\ShowInfoController.cs",
+              "RelativeDocumentMoniker": "MovieManagementSelf\\Controllers\\ShowInfoController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\MovieManagementSelf\\Controllers\\ShowInfoController.cs",
+              "RelativeToolTip": "MovieManagementSelf\\Controllers\\ShowInfoController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T15:34:03.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\MovieManagementSelf\\Views\\UserGroup\\Index.cshtml",
+              "RelativeDocumentMoniker": "MovieManagementSelf\\Views\\UserGroup\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\MovieManagementSelf\\MovieManagementSelf\\Views\\UserGroup\\Index.cshtml",
+              "RelativeToolTip": "MovieManagementSelf\\Views\\UserGroup\\Index.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAABEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-22T06:59:24.15Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:754250107:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

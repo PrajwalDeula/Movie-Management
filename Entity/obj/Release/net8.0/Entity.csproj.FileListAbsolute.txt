@@ -1,0 +1,11 @@
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\bin\Release\net8.0\Entity.deps.json
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\bin\Release\net8.0\Entity.dll
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\bin\Release\net8.0\Entity.pdb
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\Entity.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\Entity.AssemblyInfo.cs
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\Entity.dll
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\refint\Entity.dll
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\Entity.pdb
+C:\Users\Dell\source\repos\MovieManagementSelf\Entity\obj\Release\net8.0\ref\Entity.dll

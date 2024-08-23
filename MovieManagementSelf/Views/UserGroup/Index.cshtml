@@ -1,0 +1,255 @@
+﻿
+@model List<Entity.ViewModel.UserGroupVM>
+<h1 class="mt-5">User Group Table</h1>
+
+
+<div class="row mb-2">
+	<div class="col-md-12">
+		<div class="card">
+		<div class="card-body">
+			<div class="row">
+
+				<div class="col-md-3">
+					<label>Group Name</label>
+					
+					<input type="text" class="txtGroupName form-control"/> 
+					<input type="hidden" class="hdnUserGroupID form-control" value="0"/>
+				</div>
+				<div class="col-md-3">
+					<label>Group Code</label>
+						<input type='text' class="txtGroupCode form-control"/>
+				</div>
+				<div class="col-md-3">
+				
+					<button type="button" class="btn btnClear"><i class="fa fa-trash">Clear</i></button>
+					<button type="button" class="btn btnNew"><i class="fa fa-plus">Add</i></button>
+					</div>
+
+			</div>
+			</div>
+		
+</div>
+
+<div class="modal" id="mdlSetup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Setup Form</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+					</div class="form-group">
+					<label>UserGroupName</label>
+					<input type="text" class="form-control" id="txtUserGroupName"/>
+					</div>
+					<div class="form-group">
+						<label>UserGroupCode</label>
+						<input type="text" class="form-control" id="txtUserGroupCode"/>
+						</div>
+				
+				</div>
+				</div>
+				</div>
+				
+	<div class="row">
+		<div class="col-md-12">
+	<div class="card">
+		<div class="card-body">
+			<table class="table table-responsive table-stripped dtTable">
+				<thead>
+					<tr>
+						<th>SN</th>
+						<th>Group Name</th>
+						<th>Group Code</th>
+						<th>Action</th> 
+					</tr>
+				</thead>
+				<tbody class="data-list"></tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+	</div>
+
+@section Scripts{
+	<script>
+
+		$(document).ready(function(){
+			loadData();
+			
+		
+		});
+
+		function clearForm() {
+			$('.txtGroupName').val('');
+			$('.txtGroupCode').val('');
+			$('.hdnUserGroupID').val(0);
+		}
+	
+		function loadData() {
+			$.ajax({
+				contentType: 'application/json; charset=utf-8',
+				url: '@Url.Action("GetAllData","UserGroup")',
+				method: 'GET',
+				success: function (res) {
+					if (res.success) {
+						var allData = res.data;
+						var htmls = "";
+						var htmls = "<option value = 0></option>"
+						
+						$.each(allData, function (i, x) {
+							htmls += "<option value='" +x.ComplainStatusID+ "'></option>"						
+							htmls += "<tr>";
+							htmls += "<td>" + (i + 1) + "</td>";
+							htmls += "<td>" + x.userGroupName + "</td>";
+							htmls += "<td>" + x.userGroupCode + "</td>";
+							htmls += "<td>";
+							htmls += "<button type='button' class='btnEdit btn btn - secondary btn - sm ' data-key='" + x.userGroupID + "'> Edit </button>";
+							htmls += "<button type='button' class='btnDelete btn btn - danger btn - sm' data-key='" + x.userGroupID + "'> Delete </button>"
+							htmls += "</td>";
+							htmls += "</tr>";
+						});
+						$('.data-list').html(htmls);
+					}
+					else {
+						alert(res.message);
+					}
+				},
+				error: function (err) {
+
+				},
+				beforeSend: function () {
+					// $.blockUI();
+				},
+				complete: function () {
+
+				}
+			});
+
+			$(document).on('click', '.btnNew', function () {
+				var obj = {
+					UserGroupName: $('.txtGroupName').val(),
+					UserGroupCode: $('.txtGroupCode').val(),
+					UserGroupID: +$('.hdnUserGroupID').val()
+				}
+				if (!obj.UserGroupName) {
+					Swal.fire({
+						title:"Oops!",
+						text:"Enter your UserGroup Name",
+						icon:"Warning"
+					})
+				}
+
+				else if (!obj.UserGroupCode) {
+					Swal.fire({
+						title:"Oops!",
+						text:"Enter your UserGroup Code",
+						icon:"Warning"
+					})
+				}
+				else {
+					$.ajax({
+						url: '@Url.Action("Save","UserGroup")',
+						data: JSON.stringify(obj),
+						method: 'POST',
+						contentType: 'application/json;charset=utf-8',
+						success: function (res) {
+							if (res.success) {
+								alert(res.message);
+								loadData();
+
+							}
+							else {
+								alert(res.message)
+							}
+						},
+						error: function (err) {
+							console.log(err);
+						},
+						beforeSend: function () {
+
+						},
+						complete: function () {
+							
+						}
+					});
+				}
+			});
+
+
+
+			$(document).on('click','.btnClear',function(){
+				clearForm();
+			})
+
+			$(document).on('click', '.btnDelete', function () {
+				var groupid = $(this).data('key');
+				var ok = confirm('Are you sure to delete the data?');
+				if (ok) {
+					$.ajax({
+						method: 'GET',
+						contentType: 'application/json;charset=utf-8',
+						url: '@Url.Action("Delete","UserGroup")?id=' + groupid,
+						success: function (res) {
+							if (res.success) {
+								loadData();
+								
+							}
+							else {
+								alert(res.message)
+							}
+						},
+						error: function (err) {
+							console.log(err);
+						},
+						beforeSend: function () {
+
+						},
+						complete: function () {
+
+						}
+					}
+					);
+				}
+			});
+
+			$(document).on('click', '.btnEdit', function () {
+				var groupid = $(this).data('key');
+				$.ajax({
+					method:'GET',
+					contentType:'application/json;utf=charset-8',
+					url:'@Url.Action("GetByID","UserGroup")?id=' +groupid,
+						success: function(res){
+							var allUserData = res.data;
+						if(res.success){
+							loadData();
+							console.log(allUserData);
+							$('.txtGroupName').val(allUserData.userGroupName);
+							$('.txtGroupCode').val(allUserData.userGroupCode);
+							$('.hdnUserGroupID').val(allUserData.userGroupID);
+						}
+	},
+	
+	error: function (err) {
+						console.log(err);
+					},
+					beforeSend: function () {
+						// $.blockUI();
+					},
+					complete: function () {
+						$.unBlockUI();
+					}
+				})
+	;
+
+			});
+
+
+		}
+		
+	</script>
+	
+	}
